@@ -14519,13 +14519,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1251133844}
           m_TargetAssemblyTypeName: UnityStandardAssets.Vehicles.Car.InputSystem,
             Assembly-CSharp
-          m_MethodName: BrakeInput
+          m_MethodName: AccelInput
           m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 1
+            m_FloatArgument: -1
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -59629,7 +59629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &804208988
 RectTransform:
   m_ObjectHideFlags: 0
