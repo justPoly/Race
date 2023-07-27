@@ -12,7 +12,7 @@ public class DisplayItem : MonoBehaviour
     public void DisplayMap(Map _map)
     {
         itemName.text = _map.mapName;
-        itemName.color = _map.nameColor;
+        // itemName.color = _map.nameColor;
         itemDescription.text = _map.mapDescription;
         itemImage.sprite = _map.mapImage;
 

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Racing Starter Kit/Scenes/GamePlay.unity
+    path: Assets/Scenes/Splash Screen.unity
+    guid: f803b46cafb942b4683fbb973980f74b
+  - enabled: 1
+    path: Assets/Scenes/Selection.unity
+    guid: e37d3e387b8321f468f35de211b22589
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
     guid: adc28652a668a9646b0352d63f41b808
   m_configObjects: {}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d4840d0ea0ba254990545b4c392f1cf, type: 3}
+  m_Name: Car2
+  m_EditorClassIdentifier: 
+  carName: xschbrr
+  carDescription: jrvkmvtb
+  carPrice: 0
+  speed: 0
+  acceleration: 0
+  handling: 0
+  carModel: {fileID: 1781648038549052278, guid: 09063b2e9db090a49a39ec6f24188eb6,
+    type: 3}

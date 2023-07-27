@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class ChangeItemSO : MonoBehaviour
 {
+    [Header("Scriptable Objects")]
     [SerializeField] private ScriptableObject[] scriptableObjects;
+
+    [Header("Display Scripts")]
     [SerializeField] private DisplayItem display;
+    [SerializeField] private CarDisplay carDisplay;
+
     private int currentIndex;
 
     private void Awake()
@@ -20,5 +25,6 @@ public class ChangeItemSO : MonoBehaviour
            currentIndex = 0;
 
         if(display != null) display.DisplayMap((Map)scriptableObjects[currentIndex]);
+        if(carDisplay != null) carDisplay.DisplayCar((Car)scriptableObjects[currentIndex]);
     }
 }
