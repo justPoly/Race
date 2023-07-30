@@ -12,7 +12,7 @@ public class LapSelector : MonoBehaviour
 
     private void Start()
     {
-        nLaps = Convert.ToInt32(Laps.GetComponent<Text>().text);
+        nLaps = 2; //at the start of the game, the number of selected laps is 3
         ReactivatePlusButton = MaximumLaps - 1;
     }
     //with the + button in the game, the void Up is called and 1 more lap is added to the race
@@ -35,7 +35,8 @@ public class LapSelector : MonoBehaviour
     //with the - button in the game, the void Down is called and 1 lap is removed from the race
     public void Down()
     {
-        nLaps = Convert.ToInt32(Laps.GetComponent<Text>().text) - 1;//the number of selected laps goes 1 less
+        nLaps = 
+        Convert.ToInt32(Laps.GetComponent<Text>().text) - 1;//the number of selected laps goes 1 less
         Laps.GetComponent<Text>().text = Convert.ToString(nLaps);//here we convert the int to string to show it in the UI text from the laps panel
         //the min of laps its 2 and it deactivates the - button
         if (Laps.GetComponent<Text>().text == "2")
