@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c06ef70359a1641b12e9d8ef87ed55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Selection
+  sceneName: GamePlay
   countDownTime: 3
   sceneFader: {fileID: 0}
 --- !u!1 &6119717697959152720
@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 6119717697959152721}
   - component: {fileID: 6119717697959152727}
   - component: {fileID: 6119717697959152726}
+  - component: {fileID: 2017664980}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -277,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 88}
+  m_AnchoredPosition: {x: -16, y: 60}
   m_SizeDelta: {x: 435.7215, y: 440.5175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6119717697959152727
@@ -318,6 +319,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &2017664980
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6119717697959152720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39edeb07d6c17a641813c7a2facd7ca8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6119717698876941316
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -336.44485}
+  m_AnchoredPosition: {x: -14, y: -342}
   m_SizeDelta: {x: 346.7771, y: 92.0425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6119717698876941371
@@ -385,7 +406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loading...
+  m_text: <incr>Loading...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

@@ -19,6 +19,9 @@ public class CarDisplay : MonoBehaviour
     [Header("3D Model")]
     [SerializeField] private GameObject carHolder;
 
+    [SerializeField] private GameObject locked;
+    [SerializeField] private GameObject play;
+
     public void DisplayCar(Car _car)
     {
          carName.text = _car.carName;
@@ -33,6 +36,13 @@ public class CarDisplay : MonoBehaviour
             Destroy(carHolder.transform.GetChild(0).gameObject);
 
             Instantiate(_car.carModel, carHolder.transform.position, carHolder.transform.rotation, carHolder.transform);
-
+         
+        bool carUnlocked = PlayerPrefs.GetInt("currentScene", 0) >= _car.carIndex;
+        locked.SetActive(!carUnlocked);
+        play.SetActive(carUnlocked);
+        // if(carUnlocked)
+        //   itemImage.color = Color.white;
+        //   else
+        //   itemImage.color = Color.gray;
     }
 }

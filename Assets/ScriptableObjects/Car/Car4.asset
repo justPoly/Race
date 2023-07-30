@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4840d0ea0ba254990545b4c392f1cf, type: 3}
   m_Name: Car4
   m_EditorClassIdentifier: 
-  carName: Flying Car
-  carDescription: zx vmbgb
-  carPrice: 2000
-  speed: 20
-  acceleration: 40
-  handling: 0
-  carModel: {fileID: 8568208389306968013, guid: 1c295becc6f57454eb6f321fc4835483,
+  carName: Tesla CyberTruck
+  carDescription: Good old cruiser
+  carPrice: 8000
+  speed: 90
+  acceleration: 95
+  handling: 88
+  carModel: {fileID: 8021843042290236502, guid: 11ab2f2d8e1b6f543a445979557ca1f5,
     type: 3}
+  carIndex: 3

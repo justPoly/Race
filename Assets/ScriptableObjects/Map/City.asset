@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0fd6922055e8e04785f9d7c5a418241, type: 3}
-  m_Name: City Map
+  m_Name: City
   m_EditorClassIdentifier: 
-  mapIndex: 0
-  mapName: Abuja
-  mapDescription: Center Of Unity
-  nameColor: {r: 0, g: 0.16897826, b: 0.8301887, a: 0}
-  mapImage: {fileID: 21300000, guid: 0021dbba512f40243b671cfd1af3302a, type: 3}
-  sceneToLoad: {fileID: 102900000, guid: adc28652a668a9646b0352d63f41b808, type: 3}
+  mapIndex: 1
+  mapName: Yaounde
+  mapDescription: The Political Capital
+  nameColor: {r: 0, g: 0, b: 0, a: 0}
+  mapImage: {fileID: 21300000, guid: 053e2b6edf82feb499993e747013fadc, type: 3}
+  sceneToLoad: {fileID: 0}

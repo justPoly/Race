@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4840d0ea0ba254990545b4c392f1cf, type: 3}
   m_Name: Car3
   m_EditorClassIdentifier: 
-  carName: 
-  carDescription: 
-  carPrice: 80
+  carName: Audi Q
+  carDescription: Sweet escape
+  carPrice: 5000
   speed: 80
-  acceleration: 50
-  handling: 3
+  acceleration: 78
+  handling: 60
   carModel: {fileID: 6027669961966742206, guid: d87a73ca05c9e61428d03cedafa555c5,
     type: 3}
+  carIndex: 2

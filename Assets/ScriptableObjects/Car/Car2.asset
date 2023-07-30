@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4840d0ea0ba254990545b4c392f1cf, type: 3}
   m_Name: Car2
   m_EditorClassIdentifier: 
-  carName: xschbrr
-  carDescription: jrvkmvtb
-  carPrice: 0
-  speed: 0
-  acceleration: 0
-  handling: 0
+  carName: TwazXX
+  carDescription: Small but mighty
+  carPrice: 3000
+  speed: 73
+  acceleration: 65
+  handling: 50
   carModel: {fileID: 1781648038549052278, guid: 09063b2e9db090a49a39ec6f24188eb6,
     type: 3}
+  carIndex: 1

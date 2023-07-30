@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4840d0ea0ba254990545b4c392f1cf, type: 3}
   m_Name: Car1
   m_EditorClassIdentifier: 
-  carName: C
-  carDescription: kgkmlg
+  carName: PynCombinator
+  carDescription: Top of the morning
   carPrice: 0
-  speed: 0
-  acceleration: 0
-  handling: 0
-  carModel: {fileID: 8021843042290236502, guid: 11ab2f2d8e1b6f543a445979557ca1f5,
+  speed: 68
+  acceleration: 70
+  handling: 45
+  carModel: {fileID: 8568208389306968013, guid: 1c295becc6f57454eb6f321fc4835483,
     type: 3}

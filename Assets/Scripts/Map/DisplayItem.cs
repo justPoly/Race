@@ -8,6 +8,7 @@ public class DisplayItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemDescription;
     [SerializeField] private Image itemImage;
     [SerializeField] private GameObject locked;
+    [SerializeField] private GameObject play;
 
     public void DisplayMap(Map _map)
     {
@@ -18,6 +19,7 @@ public class DisplayItem : MonoBehaviour
 
         bool mapUnlocked = PlayerPrefs.GetInt("currentScene", 0) >= _map.mapIndex;
         locked.SetActive(!mapUnlocked);
+        play.SetActive(mapUnlocked);
         if(mapUnlocked)
           itemImage.color = Color.white;
           else

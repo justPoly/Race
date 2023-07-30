@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 //this script is used in the Play button from the first menu and the Continue button when you finish the race
 public class Continue : MonoBehaviour
 {
+    void Start()
+    {
+    //    Play();
+    }
+
     [SerializeField] private GameObject RaceUI, LapsBotsPanel, Countdown, FinishCamera, Checkpoints, LapsSelected, BotsSelected;
     //also, it is used if we hit restart in the pause menu
     public void Restart()
