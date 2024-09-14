@@ -25,18 +25,5 @@ public class CustomInput : MonoBehaviour
             uiElementToMove.anchoredPosition = originalAnchoredPosition;
         }
     }
-
-    // public void NewPosition()
-    // {
-    //     // Calculate the new anchored position
-    //     Vector2 newAnchoredPosition = originalAnchoredPosition + Vector2.up * moveDistance;
-    //     // Apply the new anchored position to the UI element
-    //     uiElementToMove.anchoredPosition = newAnchoredPosition;
-    // }
-
-    // public void OriginalPosition()
-    // {
-    //     uiElementToMove.anchoredPosition = originalAnchoredPosition;
-    // }
    
 }
