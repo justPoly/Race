@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private Currency playerCurrency;
     private CarUpgradeSystem carUpgradeSystem;
 
     [SerializeField] private CarUpgrade engineUpgrade;
@@ -15,12 +14,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        playerCurrency = new Currency(1000); // Initial balance of 1000 credits
-        carUpgradeSystem = new CarUpgradeSystem(playerCurrency);
+        // Initialize the Currency singleton with an initial balance of 1000 (or use saved balance)
+        Currency.Instance.InitializeCurrency(1000);
+
+        carUpgradeSystem = new CarUpgradeSystem(Currency.Instance);
 
         // Load saved upgrade state when the game starts
         LoadUpgradeState();
-        
+
         // Example usage: Upgrade car based on save data
         if (IsUpgradePurchased(EngineUpgradeKey))
         {
@@ -34,14 +35,13 @@ public class GameManager : MonoBehaviour
 
     public int GetCurrencyBalance()
     {
-        return playerCurrency.GetBalance();
+        return Currency.Instance.GetBalance();
     }
-
 
     public void UpgradeCar(CarUpgrade upgrade)
     {
         carUpgradeSystem.UpgradeCar(upgrade);
-        Debug.Log($"Current Balance: {playerCurrency.GetBalance()} credits.");
+        Debug.Log($"Current Balance: {Currency.Instance.GetBalance()} credits.");
 
         // Save upgrade state after purchasing
         SaveUpgradeState(upgrade.upgradeName);
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             default: reward = 50; break;
         }
 
-        playerCurrency.AddMoney(reward);
+        Currency.Instance.AddMoney(reward);
         Debug.Log($"Player finished in position {position}, rewarded {reward} credits!");
     }
 
@@ -90,11 +90,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Engine upgrade previously purchased");
         }
-        
+
         if (IsUpgradePurchased(TiresUpgradeKey))
         {
             Debug.Log("Tires upgrade previously purchased");
         }
     }
 }
-

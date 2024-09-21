@@ -1,11 +1,31 @@
 using UnityEngine;
 
-public class Currency
+public class Currency : MonoBehaviour
 {
+    // Singleton instance
+    public static Currency Instance { get; private set; }
+
     private int balance;
     private const string CurrencyKey = "PlayerCurrency"; // Key to store in PlayerPrefs
 
-    public Currency(int initialBalance)
+    // Initialize the Singleton and ensure it persists across scenes
+    private void Awake()
+    {
+        // If an instance already exists, destroy this object
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Set this instance and ensure it doesn't get destroyed on scene load
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    // Initialize currency (you could call this from a GameManager or UI script)
+    public void InitializeCurrency(int initialBalance)
     {
         balance = PlayerPrefs.GetInt(CurrencyKey, initialBalance); // Load saved currency
     }
