@@ -21,6 +21,8 @@ public class CarDisplay : MonoBehaviour
 
     [SerializeField] private GameObject locked;
     [SerializeField] private GameObject play;
+    [SerializeField] private GameObject paintUpgrade;
+    [SerializeField] private GameObject tireUpgrade;
 
     public void DisplayCar(Car _car)
     {
@@ -40,6 +42,8 @@ public class CarDisplay : MonoBehaviour
         bool carUnlocked = PlayerPrefs.GetInt("currentScene", 0) >= _car.carIndex;
         locked.SetActive(!carUnlocked);
         play.SetActive(carUnlocked);
+        paintUpgrade.SetActive(carUnlocked);
+        tireUpgrade.SetActive(carUnlocked);
         // if(carUnlocked)
         //   itemImage.color = Color.white;
         //   else

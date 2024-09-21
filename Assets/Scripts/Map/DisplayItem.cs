@@ -20,6 +20,7 @@ public class DisplayItem : MonoBehaviour
         bool mapUnlocked = PlayerPrefs.GetInt("currentScene", 0) >= _map.mapIndex;
         locked.SetActive(!mapUnlocked);
         play.SetActive(mapUnlocked);
+
         if(mapUnlocked)
           itemImage.color = Color.white;
           else

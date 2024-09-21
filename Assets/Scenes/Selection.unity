@@ -2732,7 +2732,7 @@ GameObject:
   - component: {fileID: 1150381584}
   - component: {fileID: 1150381583}
   m_Layer: 5
-  m_Name: EngineUpgrade
+  m_Name: PaintUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4418,7 +4418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Engine Upgrade
+  m_text: "Paint \nUpgrade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a1eee1facb61ac74096140ff3c047bd0, type: 2}
   m_sharedMaterial: {fileID: 21195289889406082, guid: a1eee1facb61ac74096140ff3c047bd0,
@@ -5877,6 +5877,8 @@ MonoBehaviour:
   carHolder: {fileID: 687861745}
   locked: {fileID: 6952566204716033823}
   play: {fileID: 6952566203793298637}
+  paintUpgrade: {fileID: 1150381582}
+  tireUpgrade: {fileID: 769719950}
 --- !u!224 &6952566204286937248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6392,6 +6394,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6999012463648358539, guid: 6f5656c3785d1404ebe78a827f808c21,
+        type: 3}
+      propertyPath: tireUpgrade
+      value: 
+      objectReference: {fileID: 769719950}
+    - target: {fileID: 6999012463648358539, guid: 6f5656c3785d1404ebe78a827f808c21,
+        type: 3}
+      propertyPath: paintUpgrade
+      value: 
+      objectReference: {fileID: 1150381582}
     - target: {fileID: 6999012463793188481, guid: 6f5656c3785d1404ebe78a827f808c21,
         type: 3}
       propertyPath: m_fontAsset
