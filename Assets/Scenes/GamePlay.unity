@@ -15964,18 +15964,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1766574148}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &147829123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96016,6 +96004,7 @@ MonoBehaviour:
   Checkpoints: {fileID: 1426963010}
   LapsSelected: {fileID: 1264593701}
   BotsSelected: {fileID: 620085699}
+  BackButton: {fileID: 1766574148}
 --- !u!224 &1472464807
 RectTransform:
   m_ObjectHideFlags: 0

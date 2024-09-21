@@ -8,7 +8,7 @@ public class Continue : MonoBehaviour
     //    Play();
     }
 
-    [SerializeField] private GameObject RaceUI, LapsBotsPanel, Countdown, FinishCamera, Checkpoints, LapsSelected, BotsSelected;
+    [SerializeField] private GameObject RaceUI, LapsBotsPanel, Countdown, FinishCamera, Checkpoints, LapsSelected, BotsSelected, BackButton;
     //also, it is used if we hit restart in the pause menu
     public void Restart()
     {   //void restart is used in continue buttons when we finish the race and in return button of the pause menu
@@ -24,5 +24,6 @@ public class Continue : MonoBehaviour
         BotsSelected.SetActive(true); //turns off the bots depending the amount selected by the player
         LapsBotsPanel.SetActive(false); //we turn off the start panel with the laps and bots
         FinishCamera.SetActive(false); //and the camera goes off too, to use the one in the player car
+        BackButton.SetActive(false); // Disable back button
     }
 }
