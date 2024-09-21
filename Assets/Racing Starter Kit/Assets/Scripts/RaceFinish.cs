@@ -1,39 +1,88 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-//this script is used when the player completes all the laps of the race (when the race finishes)
+
 public class RaceFinish : MonoBehaviour
 {
-    //finish camera gets activated
+    private GameManager gameManager;
+
+    // Finish camera gets activated
     [SerializeField] private GameObject FinishCam;
-    //viewmodes gets deactivated so you can't change the camera once the race is over
+
+    // ViewModes get deactivated so you can't change the camera once the race is over
     [SerializeField] private GameObject ViewModes;
-    //Race UI gets deactivated once the race finishes
+
+    // Race UI gets deactivated once the race finishes
     [SerializeField] private GameObject PosDisplay, PauseButton, Panel1, Panel2;
-    //the different finish panels (if you win the race or lose)
+
+    // The different finish panels (if you win the race or lose)
     [SerializeField] private GameObject FinishPanelWin, FinishPanelLose;
 
-    void OnTriggerEnter()//the race finish trigger will activate when ChkManager.cs script detects that you completed all laps
+    void Start()
     {
-        this.GetComponent<BoxCollider>().enabled = false;//the race finish trigger collider turns off to avoid triggering twice
-        FinishCam.SetActive(true);//finish camera gets activated
-        //Race UI gets deactivated once the race finishes
-        PauseButton.SetActive(false);     Panel1.SetActive(false);        Panel2.SetActive(false);
-        //viewmodes gets deactivated so you can't change the camera once the race is over
+        // Get reference to GameManager to access the reward system
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+    void OnTriggerEnter()
+    {
+        this.GetComponent<BoxCollider>().enabled = false; // Disable trigger to avoid multiple activations
+        FinishCam.SetActive(true); // Activate finish camera
+
+        // Deactivate the race UI elements
+        PauseButton.SetActive(false);
+        Panel1.SetActive(false);
+        Panel2.SetActive(false);
         ViewModes.SetActive(false);
 
-        //if you win (you finish 1st position)
-        if (PosDisplay.GetComponent<Text>().text == "1st Place")
+        // Handle player's position
+        HandlePlayerFinish(PosDisplay.GetComponent<Text>().text);
+    }
+
+    private void HandlePlayerFinish(string positionText)
+    {
+        // Switch statement to handle rewards and UI display based on the player's position
+        switch (positionText)
         {
-            FinishPanelWin.SetActive(true);//win panel turns on
-            FinishPanelLose.SetActive(false);//lose panel turns off
+            case "1st Place":
+                RewardPlayer(1);
+                ShowFinishPanel(true); // Show win panel
+                break;
+
+            case "2nd Place":
+                RewardPlayer(2);
+                ShowFinishPanel(true); // Show win panel
+                break;
+
+            case "3rd Place":
+                RewardPlayer(3);
+                ShowFinishPanel(true); // Show win panel
+                break;
+
+            default:
+                // Any position other than top 3
+                ShowFinishPanel(false); // Show lose panel
+                EndRace();
+                break;
         }
-        //you lose (not 1st position)
-        else
-        {
-            FinishPanelWin.SetActive(false);//win panel turns off
-            FinishPanelLose.SetActive(true);//lose panel turns on
-            AudioListener.volume = 0f;//audio turns off
-            Time.timeScale = 0;//time stops
-        }
+    }
+
+    private void RewardPlayer(int position)
+    {
+        // Use GameManager's SimulateRace to give rewards
+        gameManager.SimulateRace(position);
+    }
+
+    private void ShowFinishPanel(bool win)
+    {
+        // Toggle win/lose panels based on the race outcome
+        FinishPanelWin.SetActive(win);
+        FinishPanelLose.SetActive(!win);
+    }
+
+    private void EndRace()
+    {
+        // Additional logic for ending the race (like stopping audio and time)
+        AudioListener.volume = 0f; // Turn off audio
+        Time.timeScale = 0; // Pause the game
     }
 }

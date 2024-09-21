@@ -14,22 +14,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Initialize the Currency singleton with an initial balance of 1000 (or use saved balance)
-        Currency.Instance.InitializeCurrency(1000);
-
-        carUpgradeSystem = new CarUpgradeSystem(Currency.Instance);
-
-        // Load saved upgrade state when the game starts
-        LoadUpgradeState();
-
-        // Example usage: Upgrade car based on save data
-        if (IsUpgradePurchased(EngineUpgradeKey))
+        // Check if Currency.Instance is available before using it
+        if (Currency.Instance != null)
         {
-            Debug.Log("Engine already upgraded");
+            Currency.Instance.InitializeCurrency(1000); // Initialize currency with 1000 credits
+            carUpgradeSystem = new CarUpgradeSystem(Currency.Instance);
+
+            // Load saved upgrade state when the game starts
+            LoadUpgradeState();
         }
         else
         {
-            UpgradeCar(engineUpgrade);
+            Debug.LogError("Currency instance not found!");
         }
     }
 
