@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 338649022}
   - component: {fileID: 338649025}
   m_Layer: 5
-  m_Name: UnlcokButton
+  m_Name: UnlockButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7fda9ed612077d040be5344625d95e8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7df24dc671b3b04da444e6f40ddae2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6221,6 +6221,7 @@ MonoBehaviour:
   carHandling: {fileID: 548762439}
   carHolder: {fileID: 687861745}
   locked: {fileID: 6952566204716033823}
+  unlockButton: {fileID: 338649020}
   play: {fileID: 6952566203793298637}
   paintUpgrade: {fileID: 1150381582}
   tireUpgrade: {fileID: 769719950}
