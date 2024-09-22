@@ -20,6 +20,7 @@ public class CarDisplay : MonoBehaviour
     [SerializeField] private GameObject carHolder;
 
     [SerializeField] private GameObject locked;
+    [SerializeField] private GameObject unlockButton;
     [SerializeField] private GameObject play;
     [SerializeField] private GameObject paintUpgrade;
     [SerializeField] private GameObject tireUpgrade;
@@ -28,7 +29,7 @@ public class CarDisplay : MonoBehaviour
     {
          carName.text = _car.carName;
          carDescription.text = _car.carDescription;
-         carPrice.text = "$" + _car.carPrice;
+         carPrice.text = _car.carPrice.ToString();
          
          carSpeed.fillAmount = (float)_car.speed / 100;
          carHandling.fillAmount = (float)_car.handling / 100;
@@ -44,6 +45,8 @@ public class CarDisplay : MonoBehaviour
         play.SetActive(carUnlocked);
         paintUpgrade.SetActive(carUnlocked);
         tireUpgrade.SetActive(carUnlocked);
+        unlockButton.SetActive(!carUnlocked);
+
         // if(carUnlocked)
         //   itemImage.color = Color.white;
         //   else
