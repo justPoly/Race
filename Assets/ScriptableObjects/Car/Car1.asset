@@ -18,5 +18,6 @@ MonoBehaviour:
   speed: 68
   acceleration: 70
   handling: 45
-  carModel: {fileID: 8568208389306968013, guid: 1c295becc6f57454eb6f321fc4835483,
+  carModel: {fileID: 5468364705898306276, guid: 9959b372a7fa6b94bb164c3b16046625,
     type: 3}
+  carIndex: 0

@@ -52,6 +52,7 @@ public class Currency : MonoBehaviour
         {
             balance -= amount;
             SaveCurrency();
+            GetBalance();
             return true;
         }
         return false;

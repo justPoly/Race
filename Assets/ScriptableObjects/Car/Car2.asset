@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carName: TwazXX
   carDescription: Small but mighty
-  carPrice: 3000
+  carPrice: 200
   speed: 73
   acceleration: 65
   handling: 50

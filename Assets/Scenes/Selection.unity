@@ -2686,6 +2686,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   engineUpgrade: {fileID: 11400000, guid: 1895e5cd49078eb439b09eda5872a136, type: 2}
   tiresUpgrade: {fileID: 11400000, guid: bccc5ffce66dc0d49b705cb5a231e74c, type: 2}
+  availableCars:
+  - {fileID: 11400000, guid: d316e4c2a9024fc46947073afa303835, type: 2}
+  - {fileID: 11400000, guid: 8d803fa2317fda34cbf742e38a49365a, type: 2}
+  - {fileID: 11400000, guid: 00c4b9f9f08aaed45b3a81db291af671, type: 2}
+  - {fileID: 11400000, guid: e6563da33b570f5409c8766e24b3483a, type: 2}
+  spawnPoint: {fileID: 1219489699}
 --- !u!4 &951988167
 Transform:
   m_ObjectHideFlags: 0
@@ -3289,6 +3295,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216615358}
   m_CullTransparentMesh: 1
+--- !u!1 &1219489698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219489699}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1219489699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219489698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1228481815
 GameObject:
   m_ObjectHideFlags: 0
@@ -7001,3 +7038,4 @@ SceneRoots:
   - {fileID: 699961380}
   - {fileID: 1124830441}
   - {fileID: 951988167}
+  - {fileID: 1219489699}
