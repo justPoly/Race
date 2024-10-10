@@ -45,11 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    mixer: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Background
+    clip: {fileID: 8300000, guid: 9fb2c9bcdd9d44747973f67b7166645b, type: 3}
+    mixer: {fileID: -5637544684550622179, guid: ceb8655a6245b9e48a8462c32ff1cc74,
+      type: 2}
+    volume: 0.79
+    pitch: 2.31
+    loop: 1
+    source: {fileID: 0}
+  - name: 'Click '
+    clip: {fileID: 8300000, guid: 622df6012652bdb498c7ec99b1b8a532, type: 3}
+    mixer: {fileID: 4572139888945257541, guid: ceb8655a6245b9e48a8462c32ff1cc74, type: 2}
+    volume: 0.459
+    pitch: 1.21
     loop: 0
     source: {fileID: 0}
   soundSO: []

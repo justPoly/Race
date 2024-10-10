@@ -1982,7 +1982,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &699961380
 RectTransform:
@@ -2087,17 +2087,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4151004309388709969, guid: ee68403d3a7afd54d9c20372ec4a50ff,
         type: 3}
-      propertyPath: soundSO.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4151004309388709969, guid: ee68403d3a7afd54d9c20372ec4a50ff,
-        type: 3}
-      propertyPath: soundSO.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1bacc1aea815ce949a6a572c00d64baf,
-        type: 2}
-    - target: {fileID: 4151004309388709969, guid: ee68403d3a7afd54d9c20372ec4a50ff,
-        type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 9fb2c9bcdd9d44747973f67b7166645b, type: 3}
@@ -2116,11 +2105,6 @@ PrefabInstance:
       propertyPath: sounds.Array.data[1].clip
       value: 
       objectReference: {fileID: 8300000, guid: 622df6012652bdb498c7ec99b1b8a532, type: 3}
-    - target: {fileID: 4151004309388709969, guid: ee68403d3a7afd54d9c20372ec4a50ff,
-        type: 3}
-      propertyPath: sounds.Array.data[1].loop
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4151004309388709969, guid: ee68403d3a7afd54d9c20372ec4a50ff,
         type: 3}
       propertyPath: sounds.Array.data[1].name
@@ -2163,6 +2147,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee68403d3a7afd54d9c20372ec4a50ff, type: 3}
+--- !u!1 &760907058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2552042575255032238, guid: ee68403d3a7afd54d9c20372ec4a50ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 760907057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &769719950
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,7 +2511,7 @@ PrefabInstance:
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
         type: 3}
@@ -2530,12 +2520,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
         type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
+        type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 312343180}
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
         type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 760907058}
+    - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
+        type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
@@ -2546,6 +2551,11 @@ PrefabInstance:
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6119717697892487403, guid: 5e8e74be0d03cf64cbf764bb7c6b26f3,
