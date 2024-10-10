@@ -15,5 +15,6 @@ MonoBehaviour:
   m_loadingBar: 0
   m_loadingTxt: 
   m_loadingDone: 0
+  m_currencyManager: {fileID: 11400000, guid: f6562804d3c08644bac65114ae862c41, type: 2}
   m_applicationManager: {fileID: 11400000, guid: 69b2aaf0903f68e4aa9f0a2f072f120f,
     type: 2}

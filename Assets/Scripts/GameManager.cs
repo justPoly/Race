@@ -5,42 +5,56 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private CarUpgradeSystem carUpgradeSystem;
-
+    
     [SerializeField] private CarUpgrade engineUpgrade;
     [SerializeField] private CarUpgrade tiresUpgrade;
+
+    [SerializeField] private CurrencyManager currencyManager; // Reference to the CurrencyManager ScriptableObject
 
     private const string EngineUpgradeKey = "EngineUpgradePurchased";
     private const string TiresUpgradeKey = "TiresUpgradePurchased";
 
     void Start()
     {
-        // Check if Currency.Instance is available before using it
-        if (Currency.Instance != null)
+        if (currencyManager != null)
         {
-            Currency.Instance.InitializeCurrency(1000); // Initialize currency with 1000 credits
-            carUpgradeSystem = new CarUpgradeSystem(Currency.Instance);
+            currencyManager.InitializeCurrency(1000); // Initialize currency with 1000 credits
+            carUpgradeSystem = new CarUpgradeSystem(currencyManager); // Use the CurrencyManager instance
 
             // Load saved upgrade state when the game starts
             LoadUpgradeState();
         }
         else
         {
-            Debug.LogError("Currency instance not found!");
+            Debug.LogError("CurrencyManager is not assigned!");
         }
     }
 
     public int GetCurrencyBalance()
     {
-        return Currency.Instance.GetBalance();
+        if (currencyManager != null)
+        {
+            return currencyManager.GetBalance(); // Use the CurrencyManager to get balance
+        }
+
+        Debug.LogError("CurrencyManager is not assigned!");
+        return 0;
     }
 
     public void UpgradeCar(CarUpgrade upgrade)
     {
-        carUpgradeSystem.UpgradeCar(upgrade);
-        Debug.Log($"Current Balance: {Currency.Instance.GetBalance()} credits.");
+        if (carUpgradeSystem != null)
+        {
+            carUpgradeSystem.UpgradeCar(upgrade);
+            Debug.Log($"Current Balance: {currencyManager.GetBalance()} credits.");
 
-        // Save upgrade state after purchasing
-        SaveUpgradeState(upgrade.upgradeName);
+            // Save upgrade state after purchasing
+            SaveUpgradeState(upgrade.upgradeName);
+        }
+        else
+        {
+            Debug.LogError("CarUpgradeSystem is not initialized!");
+        }
     }
 
     public void SimulateRace(int position)
@@ -54,8 +68,15 @@ public class GameManager : MonoBehaviour
             default: reward = 50; break;
         }
 
-        Currency.Instance.AddMoney(reward);
-        Debug.Log($"Player finished in position {position}, rewarded {reward} credits!");
+        if (currencyManager != null)
+        {
+            currencyManager.AddMoney(reward);
+            Debug.Log($"Player finished in position {position}, rewarded {reward} credits!");
+        }
+        else
+        {
+            Debug.LogError("CurrencyManager is not assigned!");
+        }
     }
 
     // Save the upgrade state after a successful upgrade

@@ -28,6 +28,19 @@ public class CarDisplay : MonoBehaviour
 
     private Car currentCar;
 
+    private CurrencyManager currencyManager;
+
+    private void Start()
+    {
+        // Get the reference to the CurrencyManager from GameStateManager
+        currencyManager = GameStateManager.CharacterManager;
+
+        if (currencyManager == null)
+        {
+            Debug.LogError("CurrencyManager not found.");
+        }
+    }
+
     public void DisplayCar(Car _car)
     {
         currentCar = _car;
@@ -67,11 +80,11 @@ public class CarDisplay : MonoBehaviour
     // Attempt to purchase the car
     private void PurchaseCar()
     {
-        if (Currency.Instance != null)
+        if (currencyManager != null)
         {
             int carPriceValue = currentCar.carPrice;
 
-            if (Currency.Instance.SpendMoney(carPriceValue))
+            if (currencyManager.SpendMoney(carPriceValue))
             {
                 Debug.Log("Car purchased successfully!");
                 // Unlock the car
@@ -85,7 +98,7 @@ public class CarDisplay : MonoBehaviour
                 tireUpgrade.SetActive(true);
                 unlockButton.SetActive(false);
 
-                Debug.Log($"New Balance: {Currency.Instance.GetBalance()} credits.");
+                Debug.Log($"New Balance: {currencyManager.GetBalance()} credits.");
             }
             else
             {
@@ -94,7 +107,7 @@ public class CarDisplay : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Currency system is not initialized.");
+            Debug.LogError("CurrencyManager is not initialized.");
         }
     }
 }

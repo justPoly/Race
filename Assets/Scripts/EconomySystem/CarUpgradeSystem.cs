@@ -2,22 +2,31 @@ using UnityEngine;
 
 public class CarUpgradeSystem
 {
-    private Currency currency;
+    private CurrencyManager currencyManager;
 
-    public CarUpgradeSystem(Currency currencySystem)
+    // Constructor that takes in the CurrencyManager scriptable object
+    public CarUpgradeSystem(CurrencyManager currencySystem)
     {
-        currency = currencySystem;
+        currencyManager = currencySystem;
     }
 
+    // Method to upgrade the car if the player has enough currency
     public void UpgradeCar(CarUpgrade upgrade)
     {
-        if (currency.SpendMoney(upgrade.cost))
+        if (currencyManager != null)
         {
-            Debug.Log($"{upgrade.upgradeName} upgraded for {upgrade.cost} credits!");
+            if (currencyManager.SpendMoney(upgrade.cost))
+            {
+                Debug.Log($"{upgrade.upgradeName} upgraded for {upgrade.cost} credits!");
+            }
+            else
+            {
+                Debug.Log("Not enough credits to upgrade!");
+            }
         }
         else
         {
-            Debug.Log("Not enough credits to upgrade!");
+            Debug.LogError("CurrencyManager is not initialized.");
         }
     }
 }

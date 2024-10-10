@@ -13,17 +13,17 @@ public class GameStateManager : SingletonScriptableObject<GameStateManager>
     [HideInInspector] public string m_loadingTxt;
     [HideInInspector] public bool m_loadingDone = false;
 
-    // [SerializeField] private CharacterManager m_characterManager;
-    // private CharacterManager m_saveCharatcerManager;
+    [SerializeField] private CurrencyManager m_currencyManager;
+    private CurrencyManager m_saveCurrencyManager;
 
     [SerializeField] private ApplicationManager m_applicationManager;
     private ApplicationManager m_saveApplicationManager;
 
 
-    // public static CharacterManager CharacterManager
-    // {
-    //     get { return Instance.m_characterManager; }
-    // }
+    public static CurrencyManager CharacterManager
+    {
+        get { return Instance.m_currencyManager; }
+    }
 
     public static ApplicationManager ApplicationManager
     {
