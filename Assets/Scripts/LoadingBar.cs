@@ -30,6 +30,6 @@ public class LoadingBar : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
